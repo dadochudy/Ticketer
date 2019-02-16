@@ -1,0 +1,13 @@
+<div class="custom-wrapper-example" matAutocompleteOrigin #origin="matAutocompleteOrigin">
+  <input
+    #locationInput="ngModel"
+    [(ngModel)]="location"
+    (ngModelChange)="SuggestLocation(location)"
+    matInput
+    [matAutocomplete]="auto"
+    [matAutocompleteConnectedTo]="origin" >
+</div>
+
+<mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+  <mat-option *ngFor="let locationSugget of locationSuggestions$ | async" [value]="locationSugget.station">{{locationSugget.station}}</mat-option>
+</mat-autocomplete>

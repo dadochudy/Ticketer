@@ -1,0 +1,184 @@
+<form action="">
+  <div class="location">
+
+    <div class="station">
+
+        <label for="from">From</label>
+        <app-search-station [location]="fromLocation"></app-search-station>
+    </div>
+
+    <div class="switch" (click)="switchLocation()">&#8644;</div>
+
+    <div class="station">
+
+        <label class="right-align" for="to">To</label>
+
+        <app-search-station class="right-align" [location]="toLocation"></app-search-station>
+    </div>
+
+  </div>
+
+  <div class="select-date">
+    <label class="btn " (click)="selectedDate()" >
+        <input type="radio" id="today" name="date-group" checked>
+        <span>Today</span>
+    </label>
+    <label class="btn " (click)="selectedDate(1)" >
+        <input type="radio" id="tomorrow" name="date-group" >
+        <span>Tomorrow</span>
+    </label>
+    <label class="btn active" for="dates">
+        <input type="checkbox" id="dates">
+        <span>Date</span>
+        <ul #dates>
+
+          <li class="day" >
+            <label for="date1" (click)="selectedDate(2)">
+              <input type="radio" id="date1" name="date-group" >
+              <p><span>Mon</span><span>1</span></p>
+            </label>
+          </li>
+          <li class="day">
+            <label for="date2" (click)="selectedDate(3)">
+              <input type="radio" id="date2" name="date-group">
+              <p><span>Tue</span><span>2</span></p>
+            </label>
+          </li>
+          <li class="day">
+            <label for="date3" (click)="selectedDate(4)">
+              <input type="radio" id="date3" name="date-group">
+              <p><span>Wed</span><span>3</span></p>
+            </label>
+          </li>
+          <li class="day">
+            <label for="date4" (click)="selectedDate(5)">
+              <input type="radio" id="date4" name="date-group">
+              <p><span>Thu</span><span>4</span></p>
+            </label>
+          </li>
+          <li class="day">
+            <label for="date5" (click)="selectedDate(6)">
+              <input type="radio" id="date5" name="date-group">
+              <p><span>Fri</span><span>5</span></p>
+            </label>
+          </li>
+          <li class="day">
+            <label for="date6" (click)="selectedDate(7)">
+              <input type="radio" id="date6" name="date-group">
+              <p><span>Sat</span><span>6</span></p>
+            </label>
+            </li>
+          <li class="day">
+            <label for="date7 " (click)="selectedDate(8)">
+              <input type="radio" id="date7" name="date-group">
+              <p><span>Sun</span><span>7</span></p>
+            </label>
+          </li>
+
+        </ul>
+    </label>
+    
+  </div>
+
+<div class="select-time" >
+    <!-- <div class="scroller" appTimeSelectScroll [timeModel]="hours" (timeModelChange)=setHours($event)> -->
+    <div class="scroller" appTimeSelectScroll [(timeModel)]="hours">
+        <ul class="hours" >
+            <li class="none">&nbsp;</li>
+            <li class="selected" id="">00</li>
+            <li class="h1" id="">01</li>
+            <li class="h2" id="">02</li>
+            <li class="h3" id="">03</li>
+            <li class="h4" id="">04</li>
+            <li class="h5" id="">05</li>
+            <li class="h6" id="">06</li>
+            <li class="h7" id="">07</li>
+            <li class="h8" id="">08</li>
+            <li class="h9" id="">09</li>
+            <li class="h10" id="">10</li>
+            <li class="h11" id="">11</li>
+            <li class="h12" id="">12</li>
+            <li class="h13" id="">13</li>
+            <li class="h14" id="">14</li>
+            <li class="h15" id="">15</li>
+            <li class="h16" id="">16</li>
+            <li class="h17" id="">17</li>
+            <li class="h18" id="">18</li>
+            <li class="h19" id="">19</li>
+            <li class="h20" id="">20</li>
+            <li class="h21" id="">21</li>
+            <li class="h22" id="">22</li>
+            <li class="h23" id="">23</li>
+            <li class="none">&nbsp;</li>
+        </ul>
+    </div>
+    <span>:</span>
+      <div class="scroller" appTimeSelectScroll [(timeModel)]="minutes">
+        <ul class="minutes">
+            <li class="none">&nbsp;</li>
+            <li class="selected" id="">00</li>
+            <li class="m1" id="">01</li>
+            <li class="m2" id="">02</li>
+            <li class="m3" id="">03</li>
+            <li class="m4" id="">04</li>
+            <li class="m5" id="">05</li>
+            <li class="m6" id="">06</li>
+            <li class="m7" id="">07</li>
+            <li class="m8" id="">08</li>
+            <li class="m9" id="">09</li>
+            <li class="m10" id="">10</li>
+            <li class="m11" id="">11</li>
+            <li class="m12" id="">12</li>
+            <li class="m13" id="">13</li>
+            <li class="m14" id="">14</li>
+            <li class="m15" id="">15</li>
+            <li class="m16" id="">16</li>
+            <li class="m17" id="">17</li>
+            <li class="m18" id="">18</li>
+            <li class="m19" id="">19</li>
+            <li class="m20" id="">20</li>
+            <li class="m21" id="">21</li>
+            <li class="m22" id="">22</li>
+            <li class="m23" id="">23</li>
+            <li class="m24" id="">24</li>
+            <li class="m25" id="">25</li>
+            <li class="m26" id="">26</li>
+            <li class="m27" id="">27</li>
+            <li class="m28" id="">28</li>
+            <li class="m29" id="">29</li>
+            <li class="m30" id="">30</li>
+            <li class="m31" id="">31</li>
+            <li class="m32" id="">32</li>
+            <li class="m33" id="">33</li>
+            <li class="m34" id="">34</li>
+            <li class="m35" id="">35</li>
+            <li class="m36" id="">36</li>
+            <li class="m37" id="">37</li>
+            <li class="m38" id="">38</li>
+            <li class="m39" id="">39</li>
+            <li class="m40" id="">40</li>
+            <li class="m41" id="">41</li>
+            <li class="m42" id="">42</li>
+            <li class="m43" id="">43</li>
+            <li class="m44" id="">44</li>
+            <li class="m45" id="">45</li>
+            <li class="m46" id="">46</li>
+            <li class="m47" id="">47</li>
+            <li class="m48" id="">48</li>
+            <li class="m49" id="">49</li>
+            <li class="m50" id="">50</li>
+            <li class="m51" id="">51</li>
+            <li class="m52" id="">52</li>
+            <li class="m53" id="">53</li>
+            <li class="m54" id="">54</li>
+            <li class="m55" id="">55</li>
+            <li class="m56" id="">56</li>
+            <li class="m57" id="">57</li>
+            <li class="m58" id="">58</li>
+            <li class="m59" id="">59</li>
+            <li class=" none" >&nbsp;</li>
+        </ul>
+    </div>
+</div>
+
+</form>

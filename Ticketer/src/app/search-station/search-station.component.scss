@@ -1,0 +1,29 @@
+
+@import '../../styles/_variables';
+
+mat-autocomplete {
+    left: 0;
+    top: 99%;
+    z-index: 10;
+    width: 130%;
+    position: absolute;
+    background-color: $ticketColor;
+    border-radius: 0 0 .3rem .3rem;
+    color: transparentize($darkColor, .05);
+    box-shadow: -3px 4px 10px transparentize($darkColor, .2), 3px 4px 10px transparentize($darkColor, .2);
+
+    mat-option {
+        min-height: 24px;
+        padding: .8rem .3rem 0.3rem;
+    }
+}
+
+:host.right-align {
+    input {  
+        text-align: right;
+    }
+    
+    mat-autocomplete {
+        right: 0;
+        left: initial; }
+}
