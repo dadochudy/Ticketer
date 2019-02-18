@@ -75,14 +75,16 @@ export class TimeSelectScrollDirective implements AfterViewInit {
 
     if (!initValue) {
       this.timeOutput.emit(this.activeData);
+      this.changeClass(this.activeData);
     }
   }
 
   changeClass(DataPos) {
 
-      this.el.nativeElement.children[0].children[this.activeData + 1].classList.remove('selected');
-      this.activeData = Math.round(DataPos);
-      this.el.nativeElement.children[0].children[this.activeData + 1].classList.add('selected');
+    this.el.nativeElement.children[0].children[this.activeData + 1].classList.remove('selected');
+    this.activeData = Math.round(DataPos);
+    this.el.nativeElement.children[0].children[this.activeData + 1].classList.add('selected');
+
   }
 
 }

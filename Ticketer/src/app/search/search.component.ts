@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { addDays, format } from 'date-fns';
 
 @Component({
@@ -8,11 +8,10 @@ import { addDays, format } from 'date-fns';
 })
 export class SearchComponent implements OnInit {
 
-  @ViewChild('dates') datesEl: ElementRef;
-
   hours: number;
   minutes: number;
   date = new Date();
+  datesForWeek = [];
   fromLocation = 'Trnava';
   toLocation = 'Pezinok';
 
@@ -37,20 +36,26 @@ export class SearchComponent implements OnInit {
 
     if (dayOffset !== 0) {
       this.date = addDays(this.date, dayOffset);
+
       console.log(format(this.date, 'ddd/MMMM/YYYY'));
     }
 
-    console.log(this.date);
   }
 
   setDates() {
-    const datesEl = this.datesEl;
 
-    for (let i = 2, j = 0; i <= 8; i++, j++) {
+    for (let i = 0; i <= 6; i++) {
 
-      const timeStamp = addDays(new Date(), i);
-      datesEl.nativeElement.children[j].children[0].children[1].children[0].innerHTML = format(timeStamp, 'ddd');
-      datesEl.nativeElement.children[j].children[0].children[1].children[1].innerHTML = format(timeStamp, 'D' );
+      const timeStamp = addDays(new Date(), (i + 2));
+
+      let listItem = {
+        index: (i + 2),
+        identifier: 'date' + i,
+        dayOfWeek: format(timeStamp, 'ddd'),
+        dayOfMonth: format(timeStamp, 'D' )
+      };
+
+      this.datesForWeek.push(listItem);
 
     }
   }

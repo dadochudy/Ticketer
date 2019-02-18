@@ -197,7 +197,7 @@ input {
     justify-content: center;
     font-weight: $fontLight;
 
-    &:nth-child(2) .scroller { margin-left: 12px; } 
+    .scroller:nth-of-type(2) { margin-left: 12px; } 
     
     .scroller {
         width: 70px;
@@ -226,8 +226,6 @@ input {
                 color-stop(100%, rgba(238, 238, 238, 0)));*/
         /* WebKit */
         &::-webkit-scrollbar {   width: 0px; }
-
-
             
         ul {
             width: 50px;
@@ -256,4 +254,29 @@ input {
         padding: 0 0px 8px 5px;
         font-weight: $fontNormal;
      }
+}
+
+.submit {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+
+    .btn {
+        width: 50%;
+        font-size: 1.2rem;
+        color: $primaryColor;
+        border-radius: 1.2rem;
+        margin-bottom: 1.5rem;
+        background-color: transparent;
+        border: 1px solid transparentize($primaryColor, .7); 
+
+        &.btn-active {
+
+            &:active {
+                color: $grad1;
+                background-color: $primaryColor;
+                box-shadow: 0px 0px 5px 0px $darkColor; }
+        }
+    }
 }

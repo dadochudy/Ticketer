@@ -19,13 +19,15 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { SearchStationComponent } from './search-station/search-station.component';
 import { TimeSelectScrollDirective } from './time-select-scroll.directive';
+import { LeadingZeroPipe } from './leading-zero.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     SearchStationComponent,
-    TimeSelectScrollDirective
+    TimeSelectScrollDirective,
+    LeadingZeroPipe
   ],
   imports: [
     BrowserModule,
