@@ -1,0 +1,54 @@
+{
+    "tickets": [{
+            "trainNums": ["REX 1721 Bojnice"],
+            "transfers": [],
+            "departureTimes": ["07:14"],
+            "arrivalTimes": ["09:17"],
+            "departureDates": ["28.02.2019"],
+            "arrivalDates": ["28.02.2019"],
+            "duration": "2hod 3min"
+        },
+        {
+            "trainNums": ["R 603 PSS LIŠIAK", "Os 5111", "Os 5011"],
+            "transfers": ["Trnava / Leopoldov",
+                "Leopoldov / Lužianky",
+                "Lužianky / Nováky"
+            ],
+            "departureTimes": ["08:44", "09:07", "10:24"],
+            "arrivalTimes": ["08:54", "09:41", "12:12"],
+            "departureDates": ["28.02.2019", "28.02.2019", "28.02.2019"],
+            "arrivalDates": ["28.02.2019", "28.02.2019", "28.02.2019"],
+            "duration": "3hod 28min"
+        },
+        {
+            "trainNums": ["REX 1723 Vtáčnik"],
+            "transfers": [],
+            "departureTimes": ["11:14"],
+            "arrivalTimes": ["13:17"],
+            "departureDates": ["28.02.2019"],
+            "arrivalDates": ["28.02.2019"],
+            "duration": "2hod 3min"
+        },
+        {
+            "trainNums": ["R 607 ANDREA SHOP.SK", "Os 5320", "Os 5019"],
+            "transfers": ["Trnava / Trenčín",
+                "Trenčín / Chynorany",
+                "Chynorany / Nováky"
+            ],
+            "departureTimes": ["12:44", "13:50", "15:25"],
+            "arrivalTimes": ["13:33", "14:56", "16:14"],
+            "departureDates": ["28.02.2019", "28.02.2019", "28.02.2019"],
+            "arrivalDates": ["28.02.2019", "28.02.2019", "28.02.2019"],
+            "duration": "3hod 30min"
+        },
+        {
+            "trainNums": ["REX 1725 Remata"],
+            "transfers": [],
+            "departureTimes": ["15:14"],
+            "arrivalTimes": ["17:16"],
+            "departureDates": ["28.02.2019"],
+            "arrivalDates": ["28.02.2019"],
+            "duration": "2hod 2min"
+        }
+    ]
+}
